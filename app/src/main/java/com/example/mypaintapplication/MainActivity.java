@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private RectangleColourView rcvColour;
     private CanvasView cvCanvas;
-    private CircleColourView ccvColour;
+
     private Button btnClearCanvas;
 
     @Override
@@ -19,17 +19,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         cvCanvas=(CanvasView)findViewById(R.id.cvCanvas);
         rcvColour=(RectangleColourView)findViewById(R.id.rcvColour);
-        ccvColour=(CircleColourView)findViewById(R.id.ccvColour);
+
 
         btnClearCanvas=(Button)findViewById(R.id.btnClearCanvas);
         btnClearCanvas.setOnClickListener(this);
 
-        ccvColour.setOnColourClickListener(new CircleColourView.OnColourClickListener() {
-            @Override
-            public void changeColour(int colour) {
-                cvCanvas.setBackgroundColour(colour);
-            }
-        });
 
         rcvColour.setOnColourClickListener(new RectangleColourView.OnColourClickListener() {
             @Override
